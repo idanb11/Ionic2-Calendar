@@ -334,9 +334,9 @@ Note: For any css class appear in the customized template, you need to specify t
 Type: TemplateRef\<IMonthViewDisplayEventTemplateContext\>    
 The template provides customized view for event displayed in the active monthview
 ``` html
-        <template #template let-view="view" let-row="row" let-col="col">
+        <ng-template #template let-view="view" let-row="row" let-col="col">
             {{view.dates[row*7+col].label}}
-        </template>
+        </ng-template>
 
         <calendar ... [monthviewDisplayEventTemplate]="template"></calendar>
 ```
@@ -344,9 +344,9 @@ The template provides customized view for event displayed in the active monthvie
 Type: TemplateRef\<IMonthViewDisplayEventTemplateContext\>    
 The template provides customized view for event displayed in the inactive monthview
 ``` html
-        <template #template let-view="view" let-row="row" let-col="col">
+        <ng-template #template let-view="view" let-row="row" let-col="col">
             {{view.dates[row*7+col].label}}
-        </template>
+        </ng-template>
 
         <calendar ... [monthviewInactiveDisplayEventTemplate]="template"></calendar>
 ```
@@ -354,9 +354,9 @@ The template provides customized view for event displayed in the inactive monthv
 Type: TemplateRef\<IMonthViewEventDetailTemplateContext\>    
 The template provides customized view for event detail section in the monthview
 ``` html
-        <template #template let-showEventDetail="showEventDetail" let-selectedDate="selectedDate" let-noEventsLabel="noEventsLabel">
+        <ng-template #template let-showEventDetail="showEventDetail" let-selectedDate="selectedDate" let-noEventsLabel="noEventsLabel">
 	    ... 
-        </template>
+        </ng-template>
 
         <calendar ... [monthviewEventDetailTemplate]="template"></calendar>
 ```
@@ -364,9 +364,9 @@ The template provides customized view for event detail section in the monthview
 Type: TemplateRef\<IDisplayAllDayEvent\>    
 The template provides customized view for all day event in the weekview
 ``` html
-        <template #template let-displayEvent="displayEvent">
+        <ng-template #template let-displayEvent="displayEvent">
             <div class="calendar-event-inner">{{displayEvent.event.title}}</div>
-        </template>
+        </ng-template>
 
         <calendar ... [weekviewAllDayEventTemplate]="template"></calendar>
 ```
@@ -375,9 +375,9 @@ Type: TemplateRef\<IDisplayEvent\>
 The template provides customized view for normal event in the weekview
 
 ``` html
-        <template #template let-displayEvent="displayEvent">
+        <ng-template #template let-displayEvent="displayEvent">
             <div class="calendar-event-inner">{{displayEvent.event.title}}</div>
-        </template>
+        </ng-template>
 
         <calendar ... [weekviewNormalEventTemplate]="template"></calendar>
 ```
@@ -387,9 +387,9 @@ Type: TemplateRef\<IDisplayAllDayEvent\>
 The template provides customized view for all day event in the dayview
 
 ``` html
-        <template #template let-displayEvent="displayEvent">
+        <ng-template #template let-displayEvent="displayEvent">
             <div class="calendar-event-inner">{{displayEvent.event.title}}</div>
-        </template>
+        </ng-template>
 
         <calendar ... [dayviewAllDayEventTemplate]="template"></calendar>
 ```
@@ -398,10 +398,10 @@ The template provides customized view for all day event in the dayview
 Type: TemplateRef\<IDisplayEvent\>    
 The template provides customized view for normal event in the dayview
 
-``` javascript
-        <template #template let-displayEvent="displayEvent">
+``` html
+        <ng-template #template let-displayEvent="displayEvent">
             <div class="calendar-event-inner">{{displayEvent.event.title}}</div>
-        </template>
+        </ng-template>
 
         <calendar ... [dayviewNormalEventTemplate]="template"></calendar>
 ```
